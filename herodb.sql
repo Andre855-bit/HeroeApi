@@ -59,20 +59,19 @@ end_loja varchar(100),
 email_loja varchar(50) not null,
 cel_loja char(13),
 tel_loja char(13),
-tag_loja varchar(50),
-primary key(cod_loja, nome_loja, tag_loja),
+primary key(cod_loja, nome_loja),
 foreign key(cod_usua) references tbUsuarios(cod_usua));
 
 INSERT INTO tbLojas (
-    cnpj_loja, nome_loja, imagem_loja, cod_usua, desc_loja, end_loja, email_loja, cel_loja, tel_loja, tag_loja
+    cod_usua, cnpj_loja, nome_loja, imagem_loja, desc_loja, end_loja, email_loja, cel_loja, tel_loja
 ) VALUES (
      1, '12345678000190', 'Loja das Flores', NULL, 
     'Loja especializada em flores ornamentais e buquês.', 
     'Rua Jardim Primavera, 101', 
-    'contato@lojaflores.com', '11999998888', '1133221100', 'flores'
+    'contato@lojaflores.com', '11999998888', '1133221100'
 ),(
      2, '98765432000155', 'Tech Mania', NULL, 
     'Loja de eletrônicos e acessórios tecnológicos.', 
     'Av. Inovação, 404', 
-    'suporte@techmania.com.br', '11988887777', '1144332211', 'tecnologia'
+    'suporte@techmania.com.br', '11988887777', '1144332211'
 );
