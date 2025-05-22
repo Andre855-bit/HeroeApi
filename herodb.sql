@@ -75,3 +75,30 @@ INSERT INTO tbLojas (
     'Av. Inovação, 404', 
     'suporte@techmania.com.br', '11988887777', '1144332211'
 );
+
+
+create table tbServicos(
+cod_serv int not null auto_increment,
+cod_usua int not null,
+nome_serv varchar(50) not null,
+desc_serv varchar(250) not null,
+valor_serv decimal (5,2) not null,
+imagem_serv longblob,
+primary key(cod_serv),
+foreign key (cod_usua) references tbUsuarios(cod_usua));
+
+INSERT INTO tbServicos (
+    cod_usua, nome_serv, desc_serv, valor_serv, imagem_serv
+) VALUES (
+    1, 
+    'Aula particular de matemática', 
+    'Aulas para ensino fundamental e médio, com foco em reforço escolar e vestibulares.', 
+    75.00, 
+    NULL
+),(
+    2, 
+    'Consultoria em obras residenciais', 
+    'Análise estrutural, acompanhamento de obras e elaboração de projetos civis.', 
+    200.00, 
+    NULL -- Imagem será enviada depois
+);

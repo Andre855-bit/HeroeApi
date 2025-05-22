@@ -22,7 +22,7 @@ class DbOperationTbLojas
 	function createLoja($usuario, $cnpj, $nome, $imagem, $descricao, $endereco, $email, $tel, $cel){
 		$stmt = $this->con->prepare("INSERT INTO tbLoja( cod_usua, cnpj_loja, nome_loja, imagem_loja, desc_loja, end_loja,
 email_loja, cel_loja, tel_loja) VALUE (?,?,?,?,?,?,?,?,?,?)");
-		$stmt->bind_param("issssssss", $usuario, $cnpj, $nome, $imagem, $descricao, $endereco, $email, $tel, $cel);
+		$stmt->bind_param("issbsssss", $usuario, $cnpj, $nome, $imagem, $descricao, $endereco, $email, $tel, $cel);
 		if($stmt->execute())
 			return true; 			
 		return false;
@@ -37,6 +37,7 @@ email_loja, cel_loja, tel_loja FROM tbLojas");
 		$lojas = array(); 
 		
 		while($stmt->fetch()){
+			$loja = array();
 			$loja['cod_loja'] = $cod;
         	$loja['cod_usua'] = $usuario;
         	$loja['cnpj_loja'] = $cnpj;
@@ -57,7 +58,7 @@ email_loja, cel_loja, tel_loja FROM tbLojas");
 	
 	function updateLoja($cod, $usuario, $cnpj, $nome, $imagem, $descricao, $endereco, $email, $tel, $cel){
 		$stmt = $this->con->prepare("UPDATE tbLojas SET cnpj_loja = ?, cnpj_loja = ?, nome_loja = ?, imagem_loja = ?, desc_loja = ?, end_loja = ?, email_loja = ?, tel_loja = ?, cel_loja = ? WHERE cod_loja = ?");
-		$stmt->bind_param("issssssssi", $usuario, $cnpj, $nome, $imagem, $descricao, $endereco, $email, $tel, $cel, $cod);
+		$stmt->bind_param("issbsssssi", $usuario, $cnpj, $nome, $imagem, $descricao, $endereco, $email, $tel, $cel, $cod);
 		if($stmt->execute())
 			return true; 
 		return false; 
