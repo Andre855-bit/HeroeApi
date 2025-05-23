@@ -20,8 +20,8 @@ class DbOperationTbServicos
 	
 	
 	function createServico($usuario, $nome, $descricao, $valor, $imagem){
-		$stmt = $this->con->prepare("INSERT INTO tbServicos(cod_serv, cod_usua, nome_serv, desc_serv, valor_serv,
-imagem_serv) VALUE(?,?,?,?,?,?)");
+		$stmt = $this->con->prepare("INSERT INTO tbServicos ( cod_usua, nome_serv, desc_serv, valor_serv,
+imagem_serv) VALUE(?,?,?,?,?)");
 		$stmt->bind_param("issib", $usuario, $nome, $descricao, $valor, $imagem);
 		if($stmt->execute())
 			return true; 			
@@ -29,7 +29,7 @@ imagem_serv) VALUE(?,?,?,?,?,?)");
 	}
 	
 	function getServicos(){
-		$stmt = $this->con->prepare("SELECT cod_serv, cod_loja, nome_serv, desc_serv, valor_serv,
+		$stmt = $this->con->prepare("SELECT cod_serv, cod_usua, nome_serv, desc_serv, valor_serv,
 imagem_serv FROM tbServicos");
 		$stmt->execute();
 		$stmt->bind_result($cod, $usuario, $nome, $descricao, $valor, $imagem);
