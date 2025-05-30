@@ -24,7 +24,7 @@ ALTER TABLE `heroes`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 
-  create table tbUsuarios(
+  create table tbUsuariosERROR(
 cod_usua int not null auto_increment,
 nome_usua varchar(50) not null,
 login_usua varchar(20) not null,
@@ -38,13 +38,29 @@ cpf_usua char(14) not null unique,
 sexo_usua char(1) default "X" check(sexo_usua in("F","M","X")),
 primary key (cod_usua));
 
-INSERT INTO tbUsuarios (
+INSERT INTO tbUsuariosERROR (
     nome_usua, login_usua, senha_usua, end_usua, profis_usua, email_usua, tel_usua, cel_usua, cpf_usua, sexo_usua
 ) VALUES (
     'Ana Paula', 'anap', 'senha123', 'Rua das Flores, 123', 'Professora', 'ana.paula@email.com', '1133221100', '1199887766', '123.456.789-00', 'F'
 ),(
     'Carlos Silva', 'carlos.s', 'seguro456', 'Av. Central, 456', 'Engenheiro', 'carlos.silva@email.com', '1122334455', '1199776655', '987.654.321-00', 'M'
 );
+
+
+
+create table tbUsuarios(
+cod_usua int not null auto_increment,
+nome_usua varchar(50) not null,
+usuario_usua varchar(20) not null,
+senha_usua varchar(12) not null,
+email_usua varchar(50) not null unique,
+cel_usua char(10),
+primary key (cod_usua));
+
+INSERT INTO tbUsuarios (nome_usua, usuario_usua, senha_usua, email_usua, cel_usua) 
+VALUES 
+('João Silva', 'joaosilva', 'senha123', 'joao.silva@email.com', '9876543210'),
+('Maria Oliveira', 'mariaoliveira', 'senha456', 'maria.oliveira@email.com', '9123456789');
 
 
 

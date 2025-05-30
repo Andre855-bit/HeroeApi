@@ -19,18 +19,18 @@ class DbOperationTbUsuarios
     }
 	
 	
-	function createUsuario($name, $email, $login, $senha, $endereco, $profissao, $tel, $cel, $cpf, $sexo){
-		$stmt = $this->con->prepare("INSERT INTO tbUsuarios (cod_usua, name_usua, login_usua, senha_usua, end_usua, profis_usua, email_usua, tel_usua, cel_usua, sexo_usua) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("ssssssiiis", $nome, $email, $login, $senha, $endereco, $profissao, $tel, $cel, $cpf, $sexo);
+	function createUsuario($nome, $usuario, $senha, $email, $cel){
+		$stmt = $this->con->prepare("INSERT INTO tbUsuarios (cod_usua, nome_usua, usuario_usua, senha_usua, email_usua, cel_usua) VALUES (?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("sssss", $nome, $usuario, $senha, $email, $cel);
 		if($stmt->execute())
 			return true; 			
 		return false;
 	}
 	
 	function getUsuarios(){
-		$stmt = $this->con->prepare("SELECT cod_usua, nome_usua, login_usua, senha_usua, end_usua, profis_usua, email_usua, tel_usua, cel_usua, cpf_usua, sexo_usua FROM tbUsuarios");
+		$stmt = $this->con->prepare("SELECT cod_usua, nome_usua, usuario_usua, senha_usua, email_usua, cel_usua FROM tbUsuarios");
 		$stmt->execute();
-		$stmt->bind_result($cod, $nome, $login, $senha, $endereco, $profissao, $email, $tel, $cel, $cpf, $sexo);
+		$stmt->bind_result($cod, $nome, $usuario, $senha, $email, $cel);
 		
 		$usuarios = array(); 
 		
@@ -38,15 +38,10 @@ class DbOperationTbUsuarios
         		$usuario = array();
         		$usuario['cod_usua'] = $cod;
         		$usuario['nome_usua'] = $nome;
-        		$usuario['login_usua'] = $login;
+        		$usuario['usuario_usua'] = $usuario;
         		$usuario['senha_usua'] = $senha;
-        		$usuario['end_usua'] = $endereco;
-        		$usuario['profis_usua'] = $profissao;
         		$usuario['email_usua'] = $email;
-        		$usuario['tel_usua'] = $tel;
         		$usuario['cel_usua'] = $cel;
-        		$usuario['cpf_usua'] = $cpf;
-        		$usuario['sexo_usua'] = $sexo; 
 			
 			array_push($usuarios, $usuario); 
 		}
@@ -55,19 +50,15 @@ class DbOperationTbUsuarios
 	}
 	
 	
-	function updateUsuario($cod, $nome, $email, $login, $senha, $endereco, $profissao, $tel, $cel, $cpf, $sexo){
-		$stmt = $this->con->prepare("UPDATE tbUsuarios SET nome_usua = ?, 
-            login_usua = ?, 
+	function updateUsuario($cod, $nome, $usuario, $senha, $email, $cel){
+		$stmt = $this->con->prepare("UPDATE tbUsuarios SET
+			nome_usua = ?, 
+            usuario_usua = ?, 
             senha_usua = ?, 
-            end_usua = ?, 
-            profis_usua = ?, 
             email_usua = ?, 
-            tel_usua = ?, 
-            cel_usua = ?, 
-            cpf_usua = ?, 
-            sexo_usua = ?
+            cel_usua = ?
         WHERE cod_usua = ?");
-		$stmt->bind_param("ssssssssssi", $nome, $email, $login, $senha, $endereco, $profissao, $tel, $cel, $cpf, $sexo, $cod);
+		$stmt->bind_param("sssssi", $cod, $nome, $usuario, $senha, $email, $cel, $cod);
 		if($stmt->execute())
 			return true; 
 		return false; 

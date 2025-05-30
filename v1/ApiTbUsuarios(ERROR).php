@@ -38,16 +38,21 @@
 	
 			case 'createusuario':
 				
-				isTheseParametersAvailable(array('nome_usua','login_usua','senha_usua','email_usua','cel_usua'));
+				isTheseParametersAvailable(array('nome_usua','login_usua','senha_usua','end_usua','profis_usua','email_usua','tel_usua','cel_usua','cpf_usua','sexo_usua'));
 				
 				$db = new DbOperationTbUsuarios();
 				
 				$result = $db->createUsuario(
 					$_POST['nome_usua'],
-					$_POST['usuario_usua'],
+					$_POST['login_usua'],
 					$_POST['senha_usua'],
+					$_POST['end_usua'],
+					$_POST['profis_usua'],
 					$_POST['email_usua'],
-					$_POST['cel_usua']
+					$_POST['tel_usua'],
+					$_POST['cel_usua'],
+					$_POST['cpf_usua'],
+					$_POST['sexo_usua']
 				);
 				
 
@@ -83,15 +88,19 @@
 			
 		
 			case 'updateusuarios':
-				isTheseParametersAvailable(array('cod_usua','nome_usua','login_usua','senha_usua','email_usua','cel_usua'));
+				isTheseParametersAvailable(array('cod_usua','nome_usua','login_usua','senha_usua','end_usua','profis_usua','email_usua','tel_usua','cel_usua','cpf_usua','sexo_usua'));
 				$db = new DbOperationTbUsuarios();
 				$result = $db->updateUsuario(
 					$_POST['nome_usua'],
-					$_POST['usuario_usua'],
+					$_POST['login_usua'],
 					$_POST['senha_usua'],
+					$_POST['end_usua'],
+					$_POST['profis_usua'],
 					$_POST['email_usua'],
-					$_POST['cel_usua']
-
+					$_POST['tel_usua'],
+					$_POST['cel_usua'],
+					$_POST['cpf_usua'],
+					$_POST['sexo_usua']
 				);
 				
 				if($result){
