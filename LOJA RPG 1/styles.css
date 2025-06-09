@@ -1,0 +1,26 @@
+
+.product {
+  margin: 20px;
+}
+
+.product-title {
+  cursor: pointer;
+}
+
+.description {
+  display: none;
+}
+
+.slideshow {
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.slideshow img {
+  width: 100%;
+  display: none;
+}
+
+.slideshow img:first-child {
+  display: block;
+}

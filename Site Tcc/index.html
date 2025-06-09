@@ -1,0 +1,201 @@
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+<head>
+<title>Quack Workers</title> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css"> <!-- Importa o framework CSS W3.CSS -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"> <!-- Importa a fonte Poppins do Google Fonts -->
+<link rel="stylesheet" type="text/css" href="css/meu_estilo.css" media="all">
+
+</head>
+<body>
+
+<!-- Menu lateral (sidebar) -->
+<nav class="w3-sidebar w3-black w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Fechar Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>QUACK<br>WORKERS</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <!-- Links do menu -->
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-blue">Home</a> 
+    <a href="#app" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-blue">App</a> 
+    <a href="#serviços" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-blue">Serviços</a> 
+    <a href="#desenvolvedores" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-blue">Desenvolvedores</a> 
+    <a href="#conclusão" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-blue">Conclusão</a>
+  </div>
+</nav>
+
+<!-- Cabeçalho para telas pequenas -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Quack Workers</span>
+</header>
+
+<!-- Efeito de overlay ao abrir menu lateral em telas pequenas -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Conteúdo principal da página -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Seção de introdução -->
+  <div class="w3-container" style="margin-top:80px" id="app">
+    <h1 class="w3-jumbo"><b>QUACK WORKERS</b></h1>
+    <h2 class="w3-xxxlarge w3-text-blue"><b>O seu bico, na hora certa.</b></h2>
+    <hr style="width:50px;border:5px solid blue" class="w3-round">
+  </div>
+  
+  <!-- Grade de imagens com visual modal -->
+<div class="w3-row-padding" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between;">
+  <div class="w3-half" style="flex: 1 0 30%; max-width: 30%">
+    <img src="Imagens/Home.png" style="width: 340px; height: auto; max-height: 450px;" onclick="onClick(this)" alt="Home">
+  </div>
+ <div class="w3-half" style="flex: 1 0 30%; max-width: 30%">
+    <img src="Imagens/Cadastro de loja.png" style="width: 340px; height: auto; max-height: 450px;" onclick="onClick(this)" alt="Cadastro de loja">
+  </div>
+   <div class="w3-half" style="flex: 1 0 30%; max-width: 30%">
+    <img src="Imagens/Home.png" style="width: 340px; height: auto; max-height: 450px;" onclick="onClick(this)" alt="Home">
+  </div>
+</div>
+
+<!-- Modal para exibir imagens em tamanho maior -->
+<div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+  <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption"></p>
+  </div>
+</div>
+
+<!-- Seção de serviços -->
+<div class="w3-container" id="serviços" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-blue"><b>Nosso App.</b></h1>
+  <hr style="width:50px;border:5px solid blue" class="w3-round">
+  <p>Gerencie seu negócio de forma simples, prática e eficiente.</p>
+  <p>Nosso aplicativo foi desenvolvido para atender às necessidades reais de prestadores de serviços autônomos, especialmente profissionais da área da beleza, como barbeiros. A ideia nasceu a partir de conversas com profissionais que enfrentam desafios diários na organização da agenda e controle financeiro, muitas vezes sem ferramentas adequadas.</p>
+    <p>Com uma interface intuitiva e funcionalidades acessíveis, o aplicativo permite:</p>
+    <p>Agendamento automático: Seus clientes podem marcar atendimentos diretamente pelo app, otimizando seu tempo e evitando conflitos de horários.</p>
+    <p>Gestão financeira simplificada: Registre ganhos e despesas em poucos cliques e acompanhe a saúde financeira do seu negócio.</p>
+    <p>Organização de agenda personalizada: Tenha controle total sobre seus dias e horários de trabalho.</p>
+    <p>Acesso facilitado: Desenvolvido para ser usado por qualquer profissional, mesmo sem conhecimentos técnicos.</p>
+    <p>Nosso objetivo é levar mais praticidade, autonomia e crescimento sustentável ao seu dia a dia como prestador de serviços. Comece agora a transformar sua rotina com uma ferramenta pensada para você.</p>
+</div>
+  
+<!-- Seção dos desenvolvedores -->
+<div class="w3-container" id="desenvolvedores" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-blue"><b>Desenvolvedores.</b></h1>
+  <hr style="width:50px;border:5px solid blue" class="w3-round">
+  <p>Desenvolvedores do app.</p>
+  <p>Por trás do nosso aplicativo de autogestão para prestadores de serviços, há uma equipe dedicada, formada por estudantes do curso técnico em Desenvolvimento de Sistemas da Etec Irmã Agostina. Unidos por um objetivo em comum - criar uma solução útil e acessível para profissionais autônomos - cada integrante trouxe suas habilidades e ideias para tornar esse projeto realidade.</p>
+  <br>
+  <p><b>Integrantes da Equipe</b>:</p>
+</div>
+
+<!-- Linha com cards dos desenvolvedores -->
+<div class="w3-row-padding w3-grayscale">
+
+  <div class="w3-col m3 w3-margin-bottom">
+    <div class="w3-light-grey">
+      <img src="Imagens/membros_da_equipe/imagemandre.jpeg" alt="André" style="width:100%">
+      <div class="w3-container" style="text-align: center;">
+        <h4 style="font-size:15px;">André Machado de Sousa Nunes</h4>
+        <br>
+        <p class="w3-opacity"> <a href="https://br.linkedin.com/">Linkedin</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-col m3 w3-margin-bottom">
+    <div class="w3-light-grey">
+      <img src="Imagens/membros_da_equipe/imagemfernando.jpeg" alt="Fernando" style="width:100%">
+      <div class="w3-container" style="text-align: center;">
+        <h4 style="font-size:15px;">Fernando Oliveira Camilo</h4>
+        <br><br>
+        <p class="w3-opacity"> <a href="https://br.linkedin.com/">Linkedin</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-col m3 w3-margin-bottom">
+    <div class="w3-light-grey">
+      <img src="Imagens/Pessoa.jpg" alt="Hugo" style="width:100%">
+      <div class="w3-container" style="text-align: center;">
+        <h4 style="font-size:15px;">Hugo de Jesus Suterio dos Santos</h4>
+        <br>
+        <p class="w3-opacity"> <a href="https://br.linkedin.com/">Linkedin</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-col m3 w3-margin-bottom">
+    <div class="w3-light-grey">
+      <img src="Imagens/Pessoa.jpg" alt="Igor" style="width:100%">
+      <div class="w3-container" style="text-align: center;">
+        <h4 style="font-size:15px;">Igor da Silva Viana</h4>
+        <br><br>
+        <p class="w3-opacity"> <a href="https://br.linkedin.com/">Linkedin</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Linha de baixo -->
+
+<div class="w3-row-padding w3-grayscale" style="display: flex; justify-content: center; align-items: center; text-align: center;">
+  
+  <div class="w3-col m3 w3-margin-bottom">
+    <div class="w3-light-grey">
+      <img src="Imagens/Pessoa.jpg" alt="Marcos" style="width:100%">
+      <div class="w3-container">
+        <h4 style="font-size:15px;">Marcos Ramos Barbosa</h4>
+        <br><br>
+        <p class="w3-opacity"> <a href="https://br.linkedin.com/">Linkedin</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-col m3 w3-margin-bottom">
+    <div class="w3-light-grey">
+      <img src="Imagens/Pessoa.jpg" alt="Pedro" style="width:100%">
+      <div class="w3-container">
+        <h4 style="font-size:15px;">Pedro Henrique Teixeira de Andrade</h4>
+        <br>
+        <p class="w3-opacity"> <a href="https://br.linkedin.com/">Linkedin</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-col m3 w3-margin-bottom">
+    <div class="w3-light-grey">
+      <img src="Imagens/membros_da_equipe/imagemtiago.jpeg" alt="Tiago" style="width:100%">
+      <div class="w3-container">
+        <h4 style="font-size:15px;">Tiago Oliveira Santos</h4>
+        <br><br>
+        <p class="w3-opacity"> <a href="https://br.linkedin.com/">Linkedin</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Seção de conclusão -->
+<div class="w3-container" id="conclusão" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-blue"><b>Conclusão.</b></h1>
+  <hr style="width:50px;border:5px solid blue" class="w3-round">
+  <p>O aplicativo de autogestão para prestadores de serviços é mais do que uma ferramenta — é um aliado no crescimento profissional de quem trabalha de forma autônoma. Criado com base em problemas reais e pensado para oferecer soluções práticas, ele reúne em um só lugar o controle da agenda, o acompanhamento financeiro e a facilidade de comunicação com os clientes.
+Nosso objetivo é tornar o dia a dia mais organizado, produtivo e profissional, permitindo que cada usuário foque no que realmente importa: oferecer um serviço de qualidade e crescer no mercado.
+Este é apenas o começo. Estamos comprometidos em continuar evoluindo a plataforma, ouvindo os usuários e trazendo atualizações que façam a diferença.
+Obrigado por fazer parte dessa jornada. Vamos juntos transformar a forma de empreender!</p>
+  <br><br><br><br>
+  <!-- Botão de voltar ao topo -->
+  <button type="submit" class="w3-button w3-block w3-padding-large w3-blue w3-margin-bottom">
+    <a href="#">Voltar para o topo</a>
+  </button>
+</div>
+
+<!-- Rodapé -->
+<div class="w3-black w3-container w3-padding-32" style="margin-top:75px;padding-right:415px">
+  <p class="w3-right">© 2025 Quack Workers. Todos os direitos reservados.</p>
+</div>
+
+<!-- Scripts -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

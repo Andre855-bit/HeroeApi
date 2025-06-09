@@ -1,0 +1,158 @@
+body{
+    background-color: rgb(20, 17, 17);
+}
+header {
+    background-color: rgb(22, 21, 21);
+    color: rgb(255, 251, 0);
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: rgb(255, 251, 0);
+    margin: 0 10px;
+   font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+} 
+.titulo{
+    color: rgb(255, 251, 0);
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+text-align: center;
+}
+#master1{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 8%;
+
+}
+
+#master1 div{
+    padding: 7px;
+    width: 450px;
+    height: 600px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+#master2{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-flow: column ;
+    padding: 8%;
+
+}
+
+#master2 div{
+    padding: 13px;
+    width: 650px;
+    height: 300px;
+    margin: 20px;
+    color: white;
+    background-color: rgb(61, 61, 61);
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 49px;
+    flex-flow: column;
+}
+
+#master2 div table{
+    color:white;
+    text-align: justify;
+}
+
+#master3{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 8%;
+
+}
+
+#master3 div{
+    padding: 7px;
+    width: 450px;
+    height: 600px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+#bt{
+    float:right;
+}
+
+#master{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding-left: 18%;
+    padding-right: 18%;
+    flex-flow: wrap;
+}
+
+#master div{
+    padding: 7px;
+    width: 210px;
+    height: 210px;
+    border-radius: 27px;
+    border: 3px solid black;
+    font-size: 17px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    background-color: rgb(54, 50, 50);
+}
+
+
+header {
+    background-color: rgb(22, 21, 21);
+    color:  rgb(255, 251, 0);
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav h1 {
+    color: red;
+    margin: 0 10px;
+   font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+button{
+    border-radius: 32px ;
+    margin: 7px;
+    border: 2px solid rgb(17, 17, 17);
+    color: rgb(255, 255, 255);
+    background-color: black;
+    padding: 7px;
+    width: 120px;
+}
+.BOX {
+    height:480px;
+    width: 400px;
+    background-color: rgb(46, 46, 46);
+    align-items: center;
+    text-align: center;
+    border-radius: 18px;
+    margin: 20px;
+    
+
+}
+.Imagem{
+    align-items: center;
+}
+.Ultrabox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+a {
+    color: inherit; /* Mantém a cor padrão do texto */
+    text-decoration: none; /* Remove a sublinha */
+}

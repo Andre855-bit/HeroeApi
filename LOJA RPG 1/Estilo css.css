@@ -1,0 +1,145 @@
+body{
+    background-color: rgb(20, 17, 17);
+}
+
+#master1{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 20%;
+    padding-top: 10%;
+
+}
+
+#master1 div{
+    padding: 7px;
+    width: 390px;
+    height: 520px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+#master1 div h1{
+    color:goldenrod;
+}
+
+#master1 div h2{
+    color: silver;
+}
+
+
+#master2{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-flow: column ;
+    padding: 8%;
+
+}
+
+#master2 div{
+    padding: 13px;
+    width: 650px;
+    height: 300px;
+    margin: 20px;
+    color: white;
+    background-color:  rgb(54, 50, 50);
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 49px;
+    flex-flow: column;
+}
+
+#master2 div table{
+    color:white;
+    text-align: justify;
+}
+
+#master3{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 8%;
+    padding-top: 4%;
+
+}
+
+#master3 div{
+    padding: 7px;
+    width: 450px;
+    height: 600px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+#bt{
+    float:right;
+}
+
+#master{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding-top: 5%;
+    padding-left: 13%;
+    padding-right: 13%;
+    flex-flow: wrap;
+}
+
+#master div{
+    padding: 7px;
+    width: 210px;
+    height: 240px;
+    border-radius: 27px;
+    border: 3px solid black;
+    font-size: 17px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    background-color: rgb(54, 50, 50);
+}
+
+#master div h3{
+    color:goldenrod;
+}
+
+#master div h4{
+    color:silver;
+}
+
+
+header {
+    background-color: rgb(22, 21, 21);
+    color: red;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav h1 {
+    color: red;
+    margin: 0 10px;
+   font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+button{
+    border-radius: 32px ;
+    margin: 7px;
+    border: 2px solid black;
+    color:  white;
+    background:  rgb(54, 50, 50);
+    padding: 7px;
+    width: 120px;
+}
+
+#direitos {
+    color: white;
+    margin: 47%;
+}
+
+#master #barra{
+    display: flex;
+    flex-flow: row;
+}

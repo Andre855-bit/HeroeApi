@@ -1,0 +1,26 @@
+/*  fonte e cor base para body e títulos */
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px; color:white}
+
+/*fundo da página*/
+body {
+   margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #000000, #1b1a1a, #000000); 
+}
+
+/* Remove sublinhado de todos os links */
+a {
+  text-decoration: none;
+}
+
+/* fundo do menu lateral */
+nav { 
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #000000, #313131); 
+}
+
+/* Estilos para as imagens dentro da classe w3-half */
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1} /* Ao passar o mouse, aumenta a opacidade */
