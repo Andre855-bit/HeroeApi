@@ -24,3 +24,77 @@ nav {
 /* Estilos para as imagens dentro da classe w3-half */
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1} /* Ao passar o mouse, aumenta a opacidade */
+
+.container-cartoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo do cartão individual */
+.imagens_do_app {
+  background-color: #f0f0f0;
+  width: 220px;
+  text-align: center;
+  border-radius: 8px;
+  flex-direction: row;
+  display: flex;
+  overflow:scroll;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.cartao img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cartao:hover {
+  background-color:deepskyblue;
+  transform: scale(1.05);
+}
+
+/* Imagem no topo do cartão */
+.cartao img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Nome e link */
+.cartao p {
+  margin: 10px 0;
+  color: rgb(9, 37, 97);
+  font-weight: bold;
+}
+
+.cartao a {
+  color: #0077b5;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .container-cartoes {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  .cartao {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .cartao img {
+    height: 250px;
+  }
+}
