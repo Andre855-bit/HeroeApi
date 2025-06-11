@@ -21,6 +21,13 @@ nav {
   background: linear-gradient(to bottom, #000000, #313131); 
 }
 
+.w3-container p {
+
+  font-size: 20px;
+  color: white;
+
+}
+
 /* Estilos para as imagens dentro da classe w3-half */
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1} /* Ao passar o mouse, aumenta a opacidade */
@@ -86,6 +93,7 @@ nav {
 .cartao img {
   width: 100%;
   height: 220px;
+  border-radius: 20px;
   object-fit: cover;
   object-position: center;
 }
@@ -95,6 +103,7 @@ nav {
   margin: 10px 0;
   color: rgb(9, 37, 97);
   font-weight: bold;
+  justify-content: center;
 }
 
 .cartao a {
@@ -102,6 +111,7 @@ nav {
   text-decoration: none;
   margin-bottom: 10px;
   display: block;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -114,6 +124,9 @@ nav {
   .cartao {
     width: 90%;
     max-width: 320px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   }
 
   .cartao img {
@@ -123,9 +136,7 @@ nav {
 
 .neon-container {
   display: inline-block;
-  background-color: #000; /* fundo escuro realça o neon */
   padding: 20px;
-  border-radius: 20px;
   margin: 20px;
   float: right;
 }
@@ -158,13 +169,55 @@ nav {
   animation: neonPulse 2s infinite;
 }
 
+#pato {
+  transition: transform 0.2s;
+}
 
+#pato:hover {
+  transform: scale(1.05);
+}
 
+.info-extra {
+  display: none;
+  background-color: deepskyblue;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  max-width: 300px;
+  transition: all 0.3s ease;
+}
 
+.detalhes-container {
+  position: relative;
+  display: inline-block;
+}
 
+.painel-detalhes {
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  background-color: deepskyblue;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 250px;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
 
+.painel-detalhes p strong {
+  font-size: 20px;
+  size: 17px;
+}
 
+.detalhes-container:hover .painel-detalhes {
+  display: block;
+}
 
-
-
-
+.botao-hover {
+  display: inline-block;
+  text-decoration: underline;
+  cursor: pointer;
+}
