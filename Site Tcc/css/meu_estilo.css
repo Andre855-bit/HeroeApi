@@ -37,22 +37,44 @@ nav {
 
 /* Estilo do cartão individual */
 .imagens_do_app {
-  background-color: #f0f0f0;
-  width: 220px;
-  text-align: center;
-  border-radius: 8px;
-  flex-direction: row;
   display: flex;
-  overflow:scroll;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  flex-wrap: nowrap; /* imagens em linha */
+  overflow-x: auto;   /* rolagem lateral */
+  gap: 20px;
+  padding: 20px;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 
-.cartao img {
-  width: 100%;
+.imagens_do_app img {
+  width: 38%;
   height: 100%;
+  margin-left: 30px;
+  border-radius: 70px;
+  border: 50px;
   object-fit: cover;
   object-position: center;
+  flex-shrink: 0; /* evita encolhimento */
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+/* Personalização da barra de rolagem para navegadores Webkit */
+.imagens_do_app::-webkit-scrollbar {
+  height: 8px;
+}
+
+.imagens_do_app::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.imagens_do_app::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+.imagens_do_app img:hover {
+  transform: scale(1.05);
 }
 
 .cartao:hover {
@@ -98,3 +120,51 @@ nav {
     height: 250px;
   }
 }
+
+.neon-container {
+  display: inline-block;
+  background-color: #000; /* fundo escuro realça o neon */
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px;
+  float: right;
+}
+
+.neon-container img {
+  width: 300px;
+  filter: drop-shadow(0 0 5px #f0f)
+          drop-shadow(0 0 10px #f0f)
+          drop-shadow(0 0 20px #f0f)
+          drop-shadow(0 0 40px #f0f);
+   animation: neonPulse 2s infinite ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+
+@keyframes pulseNeon {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px #f0f)
+            drop-shadow(0 0 20px #f0f);
+  }
+  50% {
+    filter: drop-shadow(0 0 5px #f0f)
+            drop-shadow(0 0 10px #f0f);
+  }
+}
+
+
+.neon-container img {
+  animation: neonPulse 2s infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
