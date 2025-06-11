@@ -16,3 +16,23 @@ function w3_open() {
     var captionText = document.getElementById("caption");
     captionText.innerHTML = element.alt;
   }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const pato = document.getElementById("pato");
+  const som = document.getElementById("som-pato");
+
+  pato.addEventListener("click", function () {
+    som.currentTime = 0; // Reinicia o áudio, se quiser sempre do início
+    som.play();
+  });
+});
+
+function mostrarInfo(nome) {
+  const painel = document.getElementById(`info-${nome}`);
+  painel.style.display = 'block';
+}
+
+function fecharInfo(nome) {
+  const painel = document.getElementById(`info-${nome}`);
+  painel.style.display = 'none';
+}
